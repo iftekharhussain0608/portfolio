@@ -2,54 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=1200" />
 <title>OG image source</title>
 <!-- Render with: tools/build-og.sh  (produces assets/og-image.png at 1200x627) -->
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet" />
 <style>
   html, body { margin: 0; width: 1200px; height: 627px; overflow: hidden; }
-  body {
-    background-color: #F5F2EA;
-    background-image: linear-gradient(rgba(12,27,51,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(12,27,51,.06) 1px, transparent 1px);
-    background-size: 32px 32px;
-    color: #0C1B33; font-family: Inter, system-ui, sans-serif; position: relative;
-  }
-  .frame { position: absolute; inset: 36px; border: 1.5px solid rgba(12,27,51,.25); }
-  .mark { position: absolute; width: 22px; height: 22px; border-color: #D8461F; border-style: solid; }
-  .tl { top: 26px; left: 26px; border-width: 2px 0 0 2px; } .tr { top: 26px; right: 26px; border-width: 2px 2px 0 0; }
-  .bl { bottom: 26px; left: 26px; border-width: 0 0 2px 2px; } .br { bottom: 26px; right: 26px; border-width: 0 2px 2px 0; }
-  .content { position: absolute; left: 92px; top: 84px; right: 92px; }
-  .eyebrow { font-family: "JetBrains Mono", monospace; font-size: 19px; letter-spacing: .08em; text-transform: uppercase; color: #6B7588; display: flex; align-items: center; gap: 14px; }
-  .dot { width: 11px; height: 11px; border-radius: 50%; background: #D8461F; box-shadow: 0 0 0 6px rgba(216,70,31,.14); }
-  h1 { font-family: Fraunces, Georgia, serif; font-weight: 400; font-size: 118px; line-height: .95; letter-spacing: -.035em; margin: 34px 0 30px; font-variation-settings: "opsz" 144; }
-  p { font-family: Fraunces, Georgia, serif; font-size: 40px; line-height: 1.22; margin: 0; max-width: 20ch; letter-spacing: -.01em; }
-  p em { color: #D8461F; }
-  .foot { position: absolute; left: 92px; right: 92px; bottom: 74px; display: flex; justify-content: space-between; font-family: "JetBrains Mono", monospace; font-size: 18px; letter-spacing: .08em; text-transform: uppercase; color: #3D4A5E; border-top: 1.5px solid rgba(12,27,51,.22); padding-top: 22px; }
-  .foot b { color: #D8461F; font-weight: 500; }
-  svg.bp { position: absolute; right: 70px; top: 70px; width: 330px; height: 330px; }
-  .bp .l { fill: none; stroke: #0C1B33; stroke-width: 1.4; opacity: .5; }
-  .bp .d { stroke: #0C1B33; stroke-width: 1.2; stroke-dasharray: 4 6; opacity: .5; }
-  .bp rect { fill: #FFFDF8; stroke: #0C1B33; stroke-width: 2; }
+  body { background: #07080C; color: #F4F4F6; font-family: Geist, Inter, system-ui, sans-serif; position: relative; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(90px); }
+  .b1 { width: 560px; height: 560px; left: -160px; top: -200px; background: #3B5BDB; opacity: .6; }
+  .b2 { width: 520px; height: 520px; right: -140px; top: -60px; background: #7C3AED; opacity: .55; }
+  .b3 { width: 420px; height: 420px; left: 420px; bottom: -260px; background: #DB2777; opacity: .3; }
+  .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 56px 56px; -webkit-mask-image: radial-gradient(ellipse 80% 80% at 40% 40%, #000 20%, transparent 75%); }
+  .content { position: absolute; left: 80px; top: 76px; right: 470px; }
+  .badge { display: inline-flex; align-items: center; gap: 12px; padding: 6px 16px 6px 6px; border-radius: 999px; border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.05); font-size: 19px; color: #A1A1AA; }
+  .badge b { padding: 4px 12px; border-radius: 999px; color: #fff; font-weight: 600; background: linear-gradient(92deg, rgba(110,168,254,.4), rgba(167,139,250,.5)); border: 1px solid rgba(167,139,250,.55); }
+  h1 { margin: 34px 0 0; font-size: 96px; line-height: .98; font-weight: 650; letter-spacing: -0.05em; background: linear-gradient(180deg, #fff 35%, #9CA3AF 130%); -webkit-background-clip: text; color: transparent; }
+  p { margin: 26px 0 0; font-size: 34px; line-height: 1.22; font-weight: 500; letter-spacing: -0.025em; }
+  .grad { background: linear-gradient(92deg, #6EA8FE, #A78BFA 50%, #F0ABFC); -webkit-background-clip: text; color: transparent; }
+  .card { position: absolute; right: 70px; top: 120px; width: 360px; padding: 26px; border-radius: 26px;
+    background: linear-gradient(180deg, rgba(20,22,34,.9), rgba(11,13,20,.95)) padding-box, linear-gradient(160deg, rgba(255,255,255,.3), rgba(255,255,255,.04) 40%, rgba(167,139,250,.55)) border-box; border: 1.5px solid transparent; box-shadow: 0 30px 80px -20px rgba(0,0,0,.9); }
+  .glow { position: absolute; right: 90px; top: 150px; width: 330px; height: 330px; border-radius: 40px; filter: blur(50px); opacity: .55; background: conic-gradient(from 180deg, #6EA8FE, #A78BFA, #F0ABFC, #6EA8FE); }
+  .top { display: flex; align-items: center; gap: 16px; }
+  .av { width: 66px; height: 66px; border-radius: 50%; display: grid; place-items: center; font: 600 22px "Geist Mono", monospace; color: #fff; background: radial-gradient(120% 120% at 0% 0%, #6EA8FE, #8B5CF6 55%, #DB2777 120%); box-shadow: 0 0 0 3px #0B0D14, 0 0 0 5px rgba(167,139,250,.6); }
+  .nm { font-size: 22px; font-weight: 600; } .rl { font-size: 15px; color: #A1A1AA; margin-top: 2px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 22px; }
+  .stats div { padding: 14px 12px; border-radius: 14px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); }
+  .stats b { display: block; font-size: 25px; letter-spacing: -0.03em; } .stats span { font-size: 13px; color: #71717A; }
+  .foot { position: absolute; left: 80px; bottom: 54px; font: 500 18px "Geist Mono", monospace; letter-spacing: .04em; color: #71717A; display: flex; gap: 18px; }
+  .foot i { width: 6px; height: 6px; border-radius: 50%; background: #A78BFA; align-self: center; }
 </style>
 </head>
 <body>
-  <div class="frame"></div>
-  <span class="mark tl"></span><span class="mark tr"></span><span class="mark bl"></span><span class="mark br"></span>
-  <svg class="bp" viewBox="0 0 480 480" aria-hidden="true">
-    <circle class="l" cx="240" cy="240" r="200" opacity=".25"/>
-    <polygon class="l" points="240,80 378.6,160 378.6,320 240,400 101.4,320 101.4,160"/>
-    <line class="d" x1="240" y1="80" x2="240" y2="240"/><line class="d" x1="378.6" y1="160" x2="240" y2="240"/>
-    <line class="d" x1="378.6" y1="320" x2="240" y2="240"/><line class="d" x1="240" y1="400" x2="240" y2="240"/>
-    <line class="d" x1="101.4" y1="320" x2="240" y2="240"/><line class="d" x1="101.4" y1="160" x2="240" y2="240"/>
-    <rect x="228" y="68" width="24" height="24"/><rect x="366.6" y="148" width="24" height="24"/><rect x="366.6" y="308" width="24" height="24"/>
-    <rect x="228" y="388" width="24" height="24"/><rect x="89.4" y="308" width="24" height="24"/><rect x="89.4" y="148" width="24" height="24"/>
-    <circle cx="240" cy="240" r="40" fill="#D8461F"/>
-  </svg>
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><div class="grid"></div>
   <div class="content">
-    <div class="eyebrow"><span class="dot"></span>Solutions Architect · Customer Success</div>
+    <span class="badge"><b>8× certified</b>Salesforce Architect</span>
     <h1>Iftekhar<br/>Hussain</h1>
-    <p>From blueprint to <em>business value.</em></p>
+    <p>Architecting Salesforce platforms that deliver <span class="grad">real business value.</span></p>
   </div>
-  <div class="foot"><span>Salesforce · Agentforce · Integration</span><span><b>6×</b> Certified · Bengaluru</span></div>
+  <div class="glow"></div>
+  <div class="card">
+    <div class="top"><span class="av">IH</span><div><div class="nm">Iftekhar Hussain</div><div class="rl">Architect · Customer Success</div></div></div>
+    <div class="stats"><div><b>8×</b><span>Certified</span></div><div><b>1,300+</b><span>Stores</span></div><div><b>6–10</b><span>Devs / team</span></div></div>
+  </div>
+  <div class="foot"><span>Agentforce</span><i></i><span>Integration</span><i></i><span>Data</span><i></i><span>Bengaluru</span></div>
 </body>
 </html>

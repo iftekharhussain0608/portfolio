@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Iftekhar Hussain — Salesforce Architect &amp; Customer Success</title>
   <meta name="description" content="Iftekhar Hussain is a Salesforce solutions architect turned customer success leader in Bengaluru. He designs enterprise platforms that scale, and stays close to them until they deliver value." />
   <meta name="author" content="Iftekhar Hussain" />
-  <meta name="theme-color" content="#F5F2EA" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0A1322" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#07080C" />
+  <meta name="color-scheme" content="dark" />
 
   <!-- SITE_URL: https://iftekharhussain0608.github.io/portfolio. If you move to a custom domain, replace it
        everywhere in this file (LinkedIn's link preview needs absolute URLs for og:url and og:image). -->
   <link rel="canonical" href="https://iftekharhussain0608.github.io/portfolio/" />
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Iftekhar Hussain — From blueprint to business value" />
+  <meta property="og:title" content="Iftekhar Hussain — Architecting Salesforce platforms that deliver value" />
   <meta property="og:description" content="Salesforce solutions architect turned customer success leader. Architecture that scales, measured by outcomes." />
   <meta property="og:url" content="https://iftekharhussain0608.github.io/portfolio/" />
   <meta property="og:image" content="https://iftekharhussain0608.github.io/portfolio/assets/og-image.png" />
@@ -26,7 +26,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
   <script type="application/ld+json">
@@ -35,6 +35,8 @@
     "@type": "Person",
     "name": "Iftekhar Hussain",
     "jobTitle": "Salesforce Solutions Architect & Customer Success Leader",
+    "url": "https://iftekharhussain0608.github.io/portfolio/",
+    "image": "https://iftekharhussain0608.github.io/portfolio/assets/headshot.jpg",
     "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "addressCountry": "IN" },
     "alumniOf": [
       { "@type": "CollegeOrUniversity", "name": "National Institute of Science and Technology" },
@@ -44,390 +46,564 @@
     "sameAs": ["https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce"]
   }
   </script>
-  <script>
-    // Apply a saved theme before first paint so there is no flash.
-    try { var t = localStorage.getItem('ih-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
-  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="nav" id="top">
-    <div class="wrap nav__inner">
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__pill">
       <a class="brand" href="#top" aria-label="Iftekhar Hussain, home">
-        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
-          <rect x="1.5" y="1.5" width="37" height="37" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M12 11v18" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/>
-          <path d="M20 11v18M28 11v18M20 20h8" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/>
-          <circle cx="33" cy="7" r="2.2" class="brand__dot"/>
-        </svg>
+        <span class="brand__mark" aria-hidden="true">IH</span>
         <span class="brand__name">Iftekhar Hussain</span>
       </a>
       <nav class="nav__links" id="navlinks" aria-label="Primary">
-        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
-        <a href="#work">Work</a>
+        <a href="#results">Results</a>
         <a href="#journey">Journey</a>
+        <a href="#qa">Q&amp;A</a>
         <a href="#writing">Writing</a>
-        <a class="nav__cta" href="#contact">Contact</a>
       </nav>
-      <div class="nav__tools">
-        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
-          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
-          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
-        </button>
-        <button class="icon-btn nav__menu" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-      </div>
+      <a class="btn btn--sm btn--light nav__cta" href="#contact">Let's talk</a>
+      <button class="nav__menu" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
     </div>
   </header>
 
   <main id="main">
     <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="wrap hero__grid">
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="blob blob--1"></span>
+        <span class="blob blob--2"></span>
+        <span class="blob blob--3"></span>
+        <span class="hero__grid"></span>
+      </div>
+
+      <div class="wrap hero__inner">
         <div class="hero__copy">
-          <p class="eyebrow"><span class="dot"></span>Solutions Architect · Customer Success · Bengaluru, IN</p>
-          <h1 class="hero__name">Iftekhar<br/>Hussain</h1>
-          <p class="hero__lead">I bridge the gap between business vision and <em>executable technical&nbsp;reality.</em></p>
-          <p class="hero__sub">Salesforce architect turned customer success leader. I design enterprise platforms that scale, then stay close to them until they actually pay off.</p>
-          <div class="hero__ctas">
-            <a class="btn btn--primary" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>
+          <a class="badge reveal" href="#credentials">
+            <span class="badge__new">8× certified</span>
+            <span>Salesforce Architect · Claude Certified Architect</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 4l4 4-4 4"/></svg>
+          </a>
+          <h1 class="hero__title reveal">
+            <span class="hero__name">Iftekhar Hussain</span>
+            <span class="hero__line">I architect Salesforce platforms that scale, and make sure they deliver <span class="grad">real business value.</span></span>
+          </h1>
+          <p class="hero__sub reveal">Solutions architect turned customer success leader. I bridge the gap between business vision and executable technical reality.</p>
+          <div class="hero__ctas reveal">
+            <a class="btn btn--light" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce" target="_blank" rel="noopener">
+              <svg class="i-li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>
               Connect on LinkedIn
             </a>
-            <a class="btn btn--ghost" href="#approach">How I work <span aria-hidden="true">→</span></a>
+            <a class="btn btn--glass" href="#results">See results <span aria-hidden="true">→</span></a>
           </div>
+          <ul class="values reveal" aria-label="Principles">
+            <li>Design for scale</li>
+            <li>Build for reuse</li>
+            <li>Lead by example</li>
+            <li>Measure by outcomes</li>
+          </ul>
         </div>
 
-        <figure class="hero__fig" aria-label="Diagram: six platform disciplines connected to a central business-value node">
-          <figcaption class="fig-label"><span>FIG. 00</span> How I read a platform</figcaption>
-          <svg class="blueprint" viewBox="0 0 480 480" role="img" aria-hidden="true">
-            <!-- registration marks -->
-            <g class="bp-faint">
-              <path d="M6 26V6h20M454 6h20v20M474 454v20h-20M26 474H6v-20"/>
-            </g>
-            <!-- outer hexagon -->
-            <polygon class="bp-line" points="240,80 378.6,160 378.6,320 240,400 101.4,320 101.4,160"/>
-            <!-- rings -->
-            <circle class="bp-faint" cx="240" cy="240" r="200" />
-            <circle class="bp-faint dashed" cx="240" cy="240" r="120" />
-            <!-- spokes -->
-            <g class="bp-flow">
-              <line x1="240" y1="80" x2="240" y2="240"/>
-              <line x1="378.6" y1="160" x2="240" y2="240"/>
-              <line x1="378.6" y1="320" x2="240" y2="240"/>
-              <line x1="240" y1="400" x2="240" y2="240"/>
-              <line x1="101.4" y1="320" x2="240" y2="240"/>
-              <line x1="101.4" y1="160" x2="240" y2="240"/>
-            </g>
-            <!-- dimension line -->
-            <g class="bp-dim">
-              <path d="M101.4 466h277.2M101.4 458v16M378.6 458v16"/>
-              <text x="240" y="458" text-anchor="middle">SCALE · SECURITY · SPEED</text>
-            </g>
-            <!-- nodes -->
-            <g class="bp-node">
-              <rect x="230" y="70" width="20" height="20"/>
-              <rect x="368.6" y="150" width="20" height="20"/>
-              <rect x="368.6" y="310" width="20" height="20"/>
-              <rect x="230" y="390" width="20" height="20"/>
-              <rect x="91.4" y="310" width="20" height="20"/>
-              <rect x="91.4" y="150" width="20" height="20"/>
-            </g>
-            <g class="bp-text">
-              <text x="240" y="58" text-anchor="middle">DATA MODEL</text>
-              <text x="396" y="144" text-anchor="start">INTEGRATION</text>
-              <text x="396" y="348" text-anchor="start">SECURITY</text>
-              <text x="262" y="415" text-anchor="start">RELEASE</text>
-              <text x="84" y="348" text-anchor="end">EXPERIENCE</text>
-              <text x="84" y="144" text-anchor="end">AI AGENTS</text>
-            </g>
-            <!-- center -->
-            <circle class="bp-core-ring" cx="240" cy="240" r="46"/>
-            <circle class="bp-core" cx="240" cy="240" r="34"/>
-            <text class="bp-core-text" x="240" y="236" text-anchor="middle">BUSINESS</text>
-            <text class="bp-core-text" x="240" y="250" text-anchor="middle">VALUE</text>
-          </svg>
+        <!-- Portrait: assets/portrait.webp is a background-free cutout (made from the headshot) so it sits on the dark glow. -->
+        <figure class="portrait reveal">
+          <span class="portrait__halo" aria-hidden="true"></span>
+          <span class="portrait__ring" aria-hidden="true"></span>
+          <img class="portrait__img" src="assets/portrait.webp" alt="Iftekhar Hussain" width="820" height="772" fetchpriority="high" decoding="async" />
+          <span class="float-chip float-chip--1">✦ Agentforce Specialist</span>
+          <span class="float-chip float-chip--2">Claude Certified Architect</span>
         </figure>
+
+        <aside class="hero-card spot reveal" aria-label="At a glance">
+          <div class="hero-card__top">
+            <p class="status"><i></i>Open to conversations</p>
+            <p class="hero-card__loc">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              Bengaluru · IST
+            </p>
+          </div>
+          <dl class="hero-stats">
+            <div><dt><span data-count="8" data-suffix="×">8×</span></dt><dd>Certified</dd></div>
+            <div><dt><span data-count="1300" data-suffix="+">1,300+</span></dt><dd>Retail stores</dd></div>
+            <div><dt>6–10</dt><dd>Devs per team</dd></div>
+          </dl>
+        </aside>
       </div>
 
-      <div class="wrap">
-        <dl class="stats">
-          <div class="stat"><dt>6×</dt><dd>Salesforce certified, across development, architecture and AI</dd></div>
-          <div class="stat"><dt>1,300+</dt><dd>retail stores on an order management platform I helped deliver</dd></div>
-          <div class="stat"><dt>6–10</dt><dd>developers per team led and mentored through delivery</dd></div>
-        </dl>
+      <!-- Skills marquee -->
+      <div class="marquee" aria-label="Skills and tools">
+        <div class="marquee__track">
+          <ul>
+            <li>Apex</li><li>Lightning Web Components</li><li>Agentforce</li><li>Sales Cloud</li><li>Service Cloud</li><li>Order Management</li><li>REST &amp; SOAP</li><li>OAuth · SSO</li><li>Event-driven architecture</li><li>Large data volumes</li><li>Copado</li><li>Gearset</li><li>GitHub Actions</li><li>Claude Code</li><li>TypeScript</li>
+          </ul>
+          <ul aria-hidden="true">
+            <li>Apex</li><li>Lightning Web Components</li><li>Agentforce</li><li>Sales Cloud</li><li>Service Cloud</li><li>Order Management</li><li>REST &amp; SOAP</li><li>OAuth · SSO</li><li>Event-driven architecture</li><li>Large data volumes</li><li>Copado</li><li>Gearset</li><li>GitHub Actions</li><li>Claude Code</li><li>TypeScript</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ============ APPROACH ============ -->
-    <section class="section" id="approach">
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
       <div class="wrap">
-        <p class="section__label"><span>§ 01</span> Approach</p>
-        <h2 class="section__title">I've sat on both sides of the&nbsp;table.</h2>
+        <div class="sec-head reveal">
+          <span class="pill"><i></i>About</span>
+          <h2>I've sat on <span class="grad">both sides</span> of the table.</h2>
+        </div>
 
         <div class="sides">
-          <article class="side reveal">
-            <p class="side__tag">The builder's side</p>
+          <article class="card spot reveal">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
+            </span>
+            <p class="card__kicker">The builder's side</p>
             <h3>Designing it, building it, shipping it.</h3>
             <p>Most of my career has been spent designing and delivering Salesforce solutions for enterprise customers: data models, security frameworks, integration patterns, and the release pipelines that carry them safely to production.</p>
-            <p class="side__meta">Accenture · Perficient · Perfaware</p>
+            <p class="card__meta">Accenture · Perficient · Perfaware</p>
           </article>
-          <div class="sides__gap" aria-hidden="true">
-            <span class="gap-line"></span>
-            <span class="gap-tag">the gap</span>
-            <span class="gap-line"></span>
-          </div>
-          <article class="side side--alt reveal">
-            <p class="side__tag">The customer's side</p>
+          <article class="card card--accent spot reveal">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            </span>
+            <p class="card__kicker">The customer's side</p>
             <h3>Making sure it actually pays off.</h3>
             <p>Today I work with enterprise customers on adoption and value realisation. That's where the gap between what a feature does and what an organisation actually gets out of it becomes very visible.</p>
-            <p class="side__meta">Adoption · Value realisation · Roadmaps</p>
+            <p class="card__meta">Adoption · Value realisation · Roadmaps</p>
           </article>
         </div>
 
-        <p class="manifesto reveal">My work lives in that gap: architecture that is <em>designed for scale</em> and <em>measured by outcomes.</em></p>
+        <blockquote class="statement reveal">
+          <p>“Shipping a feature isn't the same as delivering value. <span class="grad">That's the gap I close.</span>”</p>
+        </blockquote>
       </div>
     </section>
 
-    <!-- ============ EXPERTISE ============ -->
-    <section class="section section--tint" id="expertise">
+    <!-- ============ EXPERTISE (bento) ============ -->
+    <section class="section" id="expertise">
       <div class="wrap">
-        <p class="section__label"><span>§ 02</span> Core competencies</p>
-        <h2 class="section__title">Six disciplines, one platform&nbsp;mindset.</h2>
+        <div class="sec-head reveal">
+          <span class="pill"><i></i>Expertise</span>
+          <h2>Six disciplines, <span class="grad">one platform mindset.</span></h2>
+          <p>From the data model to the agent layer, designed to hold up at enterprise scale.</p>
+        </div>
 
-        <div class="cards">
-          <article class="card reveal">
-            <p class="card__num">01</p>
-            <h3>Scalable system design</h3>
-            <p>Multi-tenant architecture, large data volumes, and performance tuning that respects governor limits before they bite in production.</p>
-            <ul class="tags"><li>LDV</li><li>Governor limits</li><li>Query tuning</li></ul>
-          </article>
-          <article class="card reveal">
-            <p class="card__num">02</p>
-            <h3>Integration &amp; security</h3>
-            <p>Event-driven architectures and middleware patterns over REST and SOAP, with identity done properly: SSO, OAuth, and sharing models that hold up.</p>
-            <ul class="tags"><li>REST / SOAP</li><li>OAuth · SSO</li><li>Sharing model</li></ul>
-          </article>
-          <article class="card reveal">
-            <p class="card__num">03</p>
-            <h3>DevOps &amp; governance</h3>
-            <p>CI/CD pipelines, release strategy and impact assessment, and the Centers of Excellence that keep delivery consistent across teams.</p>
-            <ul class="tags"><li>Copado</li><li>Gearset</li><li>GitHub</li></ul>
-          </article>
-          <article class="card reveal">
-            <p class="card__num">04</p>
-            <h3>Platform engineering</h3>
-            <p>Reusable, modular Lightning Web Components and Apex built on object-oriented design, so the second project ships faster than the first.</p>
-            <ul class="tags"><li>LWC</li><li>Apex</li><li>OOP</li></ul>
-          </article>
-          <article class="card reveal">
-            <p class="card__num">05</p>
-            <h3>Strategic consulting</h3>
-            <p>Turning business requirements into solution designs and technical roadmaps that maximise ROI while managing risk and stakeholder expectations.</p>
-            <ul class="tags"><li>Roadmaps</li><li>Agile / Scrum</li><li>Stakeholders</li></ul>
-          </article>
-          <article class="card card--accent reveal">
-            <p class="card__num">06</p>
+        <div class="bento">
+          <article class="card spot bento__ai reveal">
+            <div class="ai-visual" aria-hidden="true">
+              <svg viewBox="0 0 320 160">
+                <defs>
+                  <linearGradient id="gLine" x1="0" x2="1"><stop offset="0" stop-color="#6EA8FE"/><stop offset="1" stop-color="#F0ABFC"/></linearGradient>
+                  <radialGradient id="gCore"><stop offset="0" stop-color="#C4B5FD"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
+                </defs>
+                <g class="ai-links" stroke="url(#gLine)" stroke-width="1.2" fill="none">
+                  <path d="M160 80 L40 30"/><path d="M160 80 L40 130"/><path d="M160 80 L280 30"/><path d="M160 80 L280 130"/><path d="M160 80 L160 14"/><path d="M160 80 L160 146"/>
+                </g>
+                <circle cx="160" cy="80" r="46" fill="url(#gCore)" opacity=".55"/>
+                <circle class="ai-core" cx="160" cy="80" r="14" fill="#A78BFA"/>
+                <g class="ai-nodes" fill="#0B0D14" stroke="#A1A1AA" stroke-width="1.2">
+                  <circle cx="40" cy="30" r="6"/><circle cx="40" cy="130" r="6"/><circle cx="280" cy="30" r="6"/><circle cx="280" cy="130" r="6"/><circle cx="160" cy="14" r="5"/><circle cx="160" cy="146" r="5"/>
+                </g>
+              </svg>
+            </div>
+            <span class="card__num">06</span>
             <h3>Agentic AI</h3>
             <p>Agentforce on the platform; Claude Code, skills and subagents off it. I build agentic workflows hands-on, not just slides about them.</p>
             <ul class="tags"><li>Agentforce</li><li>Claude Code</li><li>Subagents</li></ul>
           </article>
+
+          <article class="card spot reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
+            <span class="card__num">01</span>
+            <h3>Scalable system design</h3>
+            <p>Multi-tenant architecture, large data volumes and performance tuning that respects governor limits before they bite.</p>
+            <ul class="tags"><li>LDV</li><li>Governor limits</li></ul>
+          </article>
+
+          <article class="card spot reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <span class="card__num">02</span>
+            <h3>Integration &amp; security</h3>
+            <p>Event-driven patterns over REST and SOAP, with identity done properly: SSO, OAuth and sharing models that hold up.</p>
+            <ul class="tags"><li>REST / SOAP</li><li>OAuth · SSO</li></ul>
+          </article>
+
+          <article class="card spot reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7M18 11.5c0 3-3 3.5-6 4.2-2.6.6-4.6 1-5.6 2"/></svg></span>
+            <span class="card__num">03</span>
+            <h3>DevOps &amp; governance</h3>
+            <p>CI/CD, release strategy and impact assessment, plus Centers of Excellence that keep delivery consistent.</p>
+            <ul class="tags"><li>Copado</li><li>Gearset</li><li>GitHub</li></ul>
+          </article>
+
+          <article class="card spot reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/></svg></span>
+            <span class="card__num">04</span>
+            <h3>Platform engineering</h3>
+            <p>Reusable, modular LWC and Apex on object-oriented design, so the second project ships faster than the first.</p>
+            <ul class="tags"><li>LWC</li><li>Apex</li><li>OOP</li></ul>
+          </article>
+
+          <article class="card spot reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg></span>
+            <span class="card__num">05</span>
+            <h3>Strategic consulting</h3>
+            <p>Business requirements turned into solution designs and roadmaps that maximise ROI while managing risk.</p>
+            <ul class="tags"><li>Roadmaps</li><li>Agile</li><li>Stakeholders</li></ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ WORK ============ -->
-    <section class="section" id="work">
+    <!-- ============ RESULTS ============ -->
+    <section class="section" id="results">
       <div class="wrap">
-        <p class="section__label"><span>§ 03</span> Selected impact</p>
-        <h2 class="section__title">Work that held up at&nbsp;scale.</h2>
+        <div class="sec-head reveal">
+          <span class="pill"><i></i>Results</span>
+          <h2>Measured in <span class="grad">outcomes</span>, not releases.</h2>
+          <p>Five chapters from delivery and customer work.</p>
+        </div>
 
-        <ol class="work">
-          <li class="work__item reveal">
-            <span class="work__fig">FIG. 03.1</span>
-            <div class="work__body">
-              <h3>Order management at retail scale</h3>
-              <p>Integration, build, deployment and release management for an Order Management System rolled out across <strong>1,300+ retail stores</strong>.</p>
-            </div>
-            <p class="work__meta">Order Management · Integration · Release</p>
-          </li>
-          <li class="work__item reveal">
-            <span class="work__fig">FIG. 03.2</span>
-            <div class="work__body">
-              <h3>A component library that ends copy-paste UI</h3>
-              <p>A reusable Lightning Web Component library that standardised UI patterns and cut duplicated effort across projects.</p>
-            </div>
-            <p class="work__meta">LWC · Design patterns · Reuse</p>
-          </li>
-          <li class="work__item reveal">
-            <span class="work__fig">FIG. 03.3</span>
-            <div class="work__body">
-              <h3>Teams that ship maintainable code</h3>
-              <p>Led and mentored teams of six to ten developers: technical direction, code review, and keeping delivery maintainable rather than merely shipped.</p>
-            </div>
-            <p class="work__meta">Leadership · Code review · Mentoring</p>
-          </li>
-          <li class="work__item reveal">
-            <span class="work__fig">FIG. 03.4</span>
-            <div class="work__body">
-              <h3>Performance where the data gets heavy</h3>
-              <p>Large data volume design, query and component tuning, data migration, and secure REST integrations with error handling that works on a bad day.</p>
-            </div>
-            <p class="work__meta">LDV · Data migration · REST</p>
-          </li>
-        </ol>
+        <div class="results">
+          <article class="card spot result result--wide reveal">
+            <p class="result__verb">Rolled out</p>
+            <p class="result__num"><span class="grad" data-count="1300" data-suffix="+">1,300+</span></p>
+            <p class="result__unit">retail stores on one order management platform</p>
+            <p class="result__desc">Integration, build, deployment and release management for an Order Management System rolled out across a national retail estate.</p>
+          </article>
+          <article class="card spot result result--wide reveal">
+            <p class="result__verb">Led</p>
+            <p class="result__num"><span class="grad">6–10</span></p>
+            <p class="result__unit">developers per team, led and mentored</p>
+            <p class="result__desc">Technical direction, serious code review and mentoring that kept delivery maintainable rather than merely shipped.</p>
+          </article>
+          <article class="card spot result reveal">
+            <p class="result__verb">Standardised</p>
+            <p class="result__num result__num--word"><span class="grad">One library</span></p>
+            <p class="result__unit">of reusable LWC components, shared across projects</p>
+            <p class="result__desc">Standardised UI patterns and cut duplicated effort across projects.</p>
+          </article>
+          <article class="card spot result reveal">
+            <p class="result__verb">Tuned</p>
+            <p class="result__num result__num--word"><span class="grad">LDV</span></p>
+            <p class="result__unit">performance at large data volumes</p>
+            <p class="result__desc">LDV design, query and component tuning, and data migration within governor limits.</p>
+          </article>
+          <article class="card spot result reveal">
+            <p class="result__verb">Realised</p>
+            <p class="result__num result__num--word"><span class="grad">Adoption</span></p>
+            <p class="result__unit">that turns platform investment into value</p>
+            <p class="result__desc">Partnering with enterprise customers to turn platform investment into measurable outcomes.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- ============ JOURNEY ============ -->
-    <section class="section section--tint" id="journey">
+    <section class="section" id="journey">
       <div class="wrap journey">
-        <div class="journey__head">
-          <p class="section__label"><span>§ 04</span> Journey</p>
-          <h2 class="section__title">From writing the code to owning the&nbsp;outcome.</h2>
-          <p class="muted">Each step moved me closer to the business: from engineer, to architect, to the person accountable for whether the platform delivers.</p>
+        <div class="sec-head sec-head--sticky reveal">
+          <span class="pill"><i></i>Journey</span>
+          <h2>From writing the code to <span class="grad">owning the outcome.</span></h2>
+          <p>Each step moved me closer to the business: engineer, architect, then accountable for whether the platform delivers.</p>
         </div>
 
         <ol class="timeline">
-          <li class="tl reveal">
-            <p class="tl__when">2026 — Now</p>
-            <div>
-              <h3>Manager, Customer Success</h3>
-              <p class="tl__org">Salesforce</p>
-              <p>Partnering with enterprise customers on adoption and value realisation.</p>
-            </div>
-          </li>
-          <li class="tl reveal">
-            <p class="tl__when">2024 — 2026</p>
-            <div>
-              <h3>Solutions Architect</h3>
-              <p class="tl__org">Perfaware</p>
-              <p>Solution architecture for enterprise Salesforce programmes, from roadmap to release.</p>
-            </div>
-          </li>
-          <li class="tl reveal">
-            <p class="tl__when">2016 — 2024</p>
-            <div>
-              <h3>Technical Consultant → Technical Architect</h3>
-              <p class="tl__org">Perficient</p>
-              <ul class="steps">
-                <li>Technical Architect</li>
-                <li>Lead Technical Consultant</li>
-                <li>Senior Technical Consultant</li>
-                <li>Technical Consultant</li>
+          <li class="tl tl--now reveal">
+            <div class="card tl__card">
+              <div class="tl__head">
+                <div><h3>Manager, Customer Success</h3><p class="tl__org">Salesforce</p></div>
+                <span class="tl__when">2026 — Now</span>
+              </div>
+              <ul class="bullets">
+                <li>Partner with enterprise customers on adoption and value realisation across the platform.</li>
+                <li>Turn platform capabilities into outcome-led roadmaps that business stakeholders can act on.</li>
               </ul>
             </div>
           </li>
           <li class="tl reveal">
-            <p class="tl__when">2014 — 2016</p>
-            <div>
-              <h3>Software Engineer</h3>
-              <p class="tl__org">Accenture</p>
-              <p>Foundations in Java, SQL and enterprise web applications.</p>
+            <div class="card tl__card">
+              <div class="tl__head">
+                <div><h3>Solutions Architect</h3><p class="tl__org">Perfaware</p></div>
+                <span class="tl__when">2024 — 2026</span>
+              </div>
+              <ul class="bullets">
+                <li>End-to-end Salesforce architecture: data models, security frameworks and API-led integration patterns.</li>
+                <li>REST integrations with secure auth flows and error handling, plus release impact assessments.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <div class="card tl__card">
+              <div class="tl__head">
+                <div><h3>Technical Consultant → Technical Architect</h3><p class="tl__org">Perficient</p></div>
+                <span class="tl__when">2016 — 2024</span>
+              </div>
+              <ul class="steps" aria-label="Roles held">
+                <li>Technical Consultant</li><li>Senior Technical Consultant</li><li>Lead Technical Consultant</li><li>Technical Architect</li>
+              </ul>
+              <ul class="bullets">
+                <li>Integration, build, deployment and release management for an Order Management System across 1,300+ retail stores.</li>
+                <li>Led and mentored delivery teams of six to ten developers.</li>
+                <li>Built a reusable LWC component library to standardise UI patterns across projects.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <div class="card tl__card">
+              <div class="tl__head">
+                <div><h3>Software Engineer</h3><p class="tl__org">Accenture</p></div>
+                <span class="tl__when">2014 — 2016</span>
+              </div>
+              <ul class="bullets">
+                <li>Foundations in Java, SQL and enterprise web applications.</li>
+              </ul>
             </div>
           </li>
           <li class="tl tl--edu reveal">
-            <p class="tl__when">Education</p>
-            <div>
-              <h3>B.Tech, Electrical &amp; Electronics Engineering</h3>
-              <p class="tl__org">National Institute of Science and Technology</p>
-              <p>Executive education, Indian School of Business (2026)</p>
+            <div class="card tl__card">
+              <div class="tl__head">
+                <div><h3>B.Tech, Electrical &amp; Electronics Engineering</h3><p class="tl__org">National Institute of Science and Technology</p></div>
+                <span class="tl__when">Education</span>
+              </div>
+              <p class="tl__note">Executive education, Indian School of Business: Mastering Negotiation &amp; Influence; Business Storytelling &amp; Executive Presence</p>
             </div>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ============ CERTIFICATIONS + TOOLBOX ============ -->
-    <section class="section" id="certifications">
+    <!-- ============ CREDENTIALS ============ -->
+    <section class="section" id="credentials">
       <div class="wrap">
-        <p class="section__label"><span>§ 05</span> Credentials &amp; toolbox</p>
-        <h2 class="section__title">6× Salesforce certified,&nbsp;including:</h2>
+        <div class="sec-head reveal">
+          <span class="pill"><i></i>Credentials</span>
+          <h2><span class="grad">8× certified</span> across Salesforce and Anthropic.</h2>
+          <p>Architect-level depth on the platform, and production-grade AI on top of it.</p>
+        </div>
 
-        <!-- TODO: add the remaining two certifications here so the list matches the "6×" headline. -->
-        <ul class="certs">
-          <li class="cert reveal"><span class="cert__seal" aria-hidden="true">PD</span><div><p class="cert__kind">Developer</p><h3>Platform Developer I</h3></div></li>
-          <li class="cert reveal"><span class="cert__seal" aria-hidden="true">IA</span><div><p class="cert__kind">Architect</p><h3>Platform Integration Architect</h3></div></li>
-          <li class="cert reveal"><span class="cert__seal" aria-hidden="true">DA</span><div><p class="cert__kind">Architect</p><h3>Platform Data Architect</h3></div></li>
-          <li class="cert reveal"><span class="cert__seal cert__seal--ai" aria-hidden="true">AI</span><div><p class="cert__kind">AI</p><h3>Agentforce Specialist</h3></div></li>
-        </ul>
+        <!-- Verified 2026-11-26 from LinkedIn posts (certificate images) and the public Credly wallet. -->
+        <div class="cred-grid">
+          <div class="card spot cred reveal">
+            <div class="cred__head">
+              <h3 class="cred__issuer"><span class="cred__dot cred__dot--sf" aria-hidden="true"></span>Salesforce</h3>
+              <a class="cred__verify" href="https://trailhead.salesforce.com/en/credentials/verification" target="_blank" rel="noopener">Verify on Trailhead <span aria-hidden="true">↗</span></a>
+            </div>
+            <ul class="certs">
+              <li class="cert"><span class="cert__ring cert__ring--ai" aria-hidden="true"><span>AF</span></span><div><p class="cert__kind">AI · Dec 2025</p><h4>Agentforce Specialist</h4></div></li>
+              <li class="cert"><span class="cert__ring cert__ring--ai" aria-hidden="true"><span>360</span></span><div><p class="cert__kind">Data · Jun 2026</p><h4>Data 360 Consultant</h4></div></li>
+              <li class="cert"><span class="cert__ring" aria-hidden="true"><span>IA</span></span><div><p class="cert__kind">Architect · Jan 2026</p><h4>Platform Integration Architect</h4></div></li>
+              <li class="cert"><span class="cert__ring" aria-hidden="true"><span>DA</span></span><div><p class="cert__kind">Architect · Jan 2026</p><h4>Platform Data Architect</h4></div></li>
+              <li class="cert"><span class="cert__ring" aria-hidden="true"><span>PD</span></span><div><p class="cert__kind">Developer</p><h4>Platform Developer&nbsp;I</h4></div></li>
+              <li class="cert"><span class="cert__ring" aria-hidden="true"><span>ADM</span></span><div><p class="cert__kind">Admin</p><h4>Administrator</h4></div></li>
+            </ul>
+            <p class="cred__extra"><span class="cred__badge" aria-hidden="true">★</span><span>Also earned the <strong>Agentblazer Legend</strong> badge on Trailhead.</span></p>
+          </div>
 
-        <div class="toolbox">
-          <div class="toolbox__group">
-            <h3>Platform</h3>
-            <ul class="chips"><li>Apex</li><li>Lightning Web Components</li><li>Visualforce</li><li>SOQL / SOSL</li><li>Sales Cloud</li><li>Service Cloud</li><li>Order Management</li><li>Agentforce</li></ul>
-          </div>
-          <div class="toolbox__group">
-            <h3>Integration &amp; data</h3>
-            <ul class="chips"><li>REST</li><li>SOAP</li><li>OAuth / SSO</li><li>Event-driven architecture</li><li>Data migration</li><li>SQL · PL/SQL</li></ul>
-          </div>
-          <div class="toolbox__group">
-            <h3>Delivery</h3>
-            <ul class="chips"><li>Copado</li><li>Gearset</li><li>GitHub</li><li>CI/CD</li><li>Release management</li><li>Agile / Scrum</li></ul>
-          </div>
-          <div class="toolbox__group">
-            <h3>AI &amp; engineering</h3>
-            <ul class="chips"><li>Claude Code</li><li>Claude Skills</li><li>Subagents</li><li>TypeScript</li><li>JavaScript</li><li>Java</li><li>Docker</li></ul>
+          <div class="card spot cred cred--claude reveal">
+            <div class="cred__head">
+              <h3 class="cred__issuer"><span class="cred__dot cred__dot--claude" aria-hidden="true"></span>Anthropic · Claude</h3>
+              <a class="cred__verify" href="https://www.credly.com/users/iftekhar-hussain.fc163f3c/badges" target="_blank" rel="noopener">Verify on Credly <span aria-hidden="true">↗</span></a>
+            </div>
+            <ul class="certs certs--one">
+              <li class="cert"><span class="cert__ring cert__ring--claude" aria-hidden="true"><span>PRO</span></span><div><p class="cert__kind">Architect · Oct 2026</p><h4>Claude Certified Architect – Professional</h4></div></li>
+              <li class="cert"><span class="cert__ring cert__ring--claude" aria-hidden="true"><span>FDN</span></span><div><p class="cert__kind">Associate · Sep 2026</p><h4>Claude Certified Associate – Foundations</h4></div></li>
+            </ul>
+            <p class="cred__extra">Designing, governing and scaling enterprise Claude deployments: context engineering, evaluation, integration architecture.</p>
           </div>
         </div>
+
+        <h3 class="sub-head reveal">Executive education</h3>
+        <div class="edu">
+          <article class="card spot edu__item reveal">
+            <p class="cert__kind"><span class="edu__mark" aria-hidden="true">ISB</span>Indian School of Business · Jul 2026</p>
+            <h4>Mastering Negotiation and Influence Programme</h4>
+            <p>Three intensive days on the psychology of negotiation and influence: why weaker points dilute your best one, how contingency contracts settle disagreements about the future, and why the first offer is rarely the one to take.</p>
+          </article>
+          <article class="card spot edu__item reveal">
+            <p class="cert__kind"><span class="edu__mark" aria-hidden="true">ISB</span>Indian School of Business · Aug 2026</p>
+            <h4>Business Storytelling and Executive Presence Programme</h4>
+            <p>Turning architecture and data into a story that moves a decision, and carrying that story in the room with clarity and presence.</p>
+          </article>
+        </div>
+
+        <div class="card toolbox reveal">
+          <div class="toolbox__group"><h3>Platform</h3><ul class="chips"><li>Apex</li><li>LWC</li><li>Visualforce</li><li>SOQL / SOSL</li><li>Sales Cloud</li><li>Service Cloud</li><li>Order Management</li><li>Agentforce</li></ul></div>
+          <div class="toolbox__group"><h3>Integration &amp; data</h3><ul class="chips"><li>REST</li><li>SOAP</li><li>OAuth / SSO</li><li>Event-driven</li><li>Data migration</li><li>SQL · PL/SQL</li></ul></div>
+          <div class="toolbox__group"><h3>Delivery</h3><ul class="chips"><li>Copado</li><li>Gearset</li><li>GitHub</li><li>CI/CD</li><li>Release mgmt</li><li>Agile / Scrum</li></ul></div>
+          <div class="toolbox__group"><h3>AI &amp; engineering</h3><ul class="chips"><li>Claude Code</li><li>Claude Skills</li><li>Subagents</li><li>TypeScript</li><li>JavaScript</li><li>Java</li><li>Docker</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Q&A ============ -->
+    <section class="section" id="qa">
+      <div class="wrap qa">
+        <div class="sec-head sec-head--sticky reveal">
+          <span class="pill"><i></i>Q&amp;A</span>
+          <h2>Questions I get <span class="grad">asked most.</span></h2>
+          <p>Straight answers on architecture, teams and AI, from delivery rather than slides.</p>
+        </div>
+
+        <div class="qa__list">
+          <details class="qa__item reveal" open>
+            <summary><span class="qa__q">What sets you apart as an architect?</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a">
+              <p class="qa__lead">I've sat on both sides of the table.</p>
+              <p>Most of my career has been spent designing and delivering Salesforce solutions. Now I work with enterprise customers on what happens after go-live, and that second view changed how I design. I still care about data models, limits and integration patterns, but I start from the question a customer will eventually ask: what did we actually get out of this? Architecture that can't answer that is only half done.</p>
+            </div>
+          </details>
+          <details class="qa__item reveal">
+            <summary><span class="qa__q">What breaks first when a Salesforce org starts to scale?</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a">
+              <p class="qa__lead">Rarely the feature. Usually the data and the limits.</p>
+              <p>Large data volumes expose everything: non-selective queries, triggers that were never bulkified, sharing recalculations nobody planned for, integrations that assume the happy path. I design for that up front, with selective queries, asynchronous processing where it belongs, and integration error handling that retries, logs and alerts instead of failing silently. Governor limits are cheaper to respect on the whiteboard than in production.</p>
+            </div>
+          </details>
+          <details class="qa__item reveal">
+            <summary><span class="qa__q">How do you lead engineering teams?</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a">
+              <p class="qa__lead">Clear direction, honest code review, and maintainable over merely shipped.</p>
+              <p>With teams of six to ten developers, the pattern that works is simple: agree the technical direction early, review code seriously, and invest in the things that make the next project faster. That's why I built a reusable LWC component library. Standard patterns meant less duplicated effort and fewer debates about how a component should behave. Mentoring is part of delivery, not a side activity.</p>
+            </div>
+          </details>
+          <details class="qa__item reveal">
+            <summary><span class="qa__q">Where does Agentforce actually pay off?</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a">
+              <p class="qa__lead">Building an agent is easy. Running one well in production is the real work.</p>
+              <p>The value shows up when agents are grounded in clean data, scoped to a clear job, and observable once they're live. Start with a narrow, high-volume use case, measure it against a business metric, and only then widen the scope. The skill that matters is shifting from assembling automations to monitoring and governing autonomous ones.</p>
+            </div>
+          </details>
+          <details class="qa__item reveal">
+            <summary><span class="qa__q">How do you close the gap between a feature and real business value?</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a">
+              <p class="qa__lead">Start from the outcome, not the release note.</p>
+              <p>Every engagement should begin with the business metric that's supposed to move: case resolution time, order accuracy, rep productivity. Then map platform capabilities to it, plan adoption as deliberately as the build, and keep measuring after go-live. A feature that's live but unused is cost, not value.</p>
+            </div>
+          </details>
+          <details class="qa__item reveal">
+            <summary><span class="qa__q">How do you use AI in your own work?</span><span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a">
+              <p class="qa__lead">Hands-on, every day.</p>
+              <p>I build agentic workflows with Claude Code, custom skills and subagents to research, prototype and automate the repetitive parts of my work. Building them myself keeps me honest about what AI does well today, and where it still needs guardrails, review and a human in the loop. It's the same discipline I'd bring to an enterprise rollout.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <!-- Verbatim excerpts from LinkedIn recommendations received (from the user's screenshots, 2026-11-26).
+         Per the persona guardrails: no client company names and no tenure claims. -->
+    <section class="section" id="testimonials">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="pill"><i></i>Recommendations</span>
+          <h2>What clients and <span class="grad">leaders say.</span></h2>
+          <p>Six recommendations on LinkedIn, from clients, managers and teammates. In their words:</p>
+        </div>
+
+        <div class="quotes">
+          <figure class="card spot quote quote--lead reveal">
+            <blockquote>“I had the pleasure of working closely with Iftekhar during our company’s implementation of a Salesforce OMS and CRM platform, and I can confidently say that the success of our project is in large part due to his expertise, dedication, and collaborative approach.”</blockquote>
+            <figcaption><span class="quote__avatar" aria-hidden="true">MP</span><span><strong>Marielle Powell Mallar</strong><span>Systems Analyst · Client</span></span></figcaption>
+          </figure>
+          <figure class="card spot quote reveal">
+            <blockquote>“If Iftekhar is the person I send to talk to the client, I would be confident that things will work out.”</blockquote>
+            <figcaption><span class="quote__avatar" aria-hidden="true">IC</span><span><strong>Irwan Chang</strong><span>Enterprise Architecture &amp; Solution Consultant · Former manager</span></span></figcaption>
+          </figure>
+          <figure class="card spot quote reveal">
+            <blockquote>“Iftekhar is an exceptional Solutions Architect and a natural leader—any team would be lucky to have him.”</blockquote>
+            <figcaption><span class="quote__avatar" aria-hidden="true">AT</span><span><strong>Andrea Toro-Ferrari</strong><span>QA Manager · Client</span></span></figcaption>
+          </figure>
+          <figure class="card spot quote reveal">
+            <blockquote>“He is a team player who will put in extra effort to make deadlines, support his project, and deeply research complicated problems.”</blockquote>
+            <figcaption><span class="quote__avatar" aria-hidden="true">MM</span><span><strong>Merk Maloney</strong><span>Senior AI Technical Product Manager (ex-Amazon, ex-Meta) · Former manager</span></span></figcaption>
+          </figure>
+          <figure class="card spot quote reveal">
+            <blockquote>“A fantastic listener, he consistently goes above and beyond to comprehend both client and team requirements.”</blockquote>
+            <figcaption><span class="quote__avatar" aria-hidden="true">MG</span><span><strong>Mahasweta Ghosh</strong><span>Technical Architect · Teammate</span></span></figcaption>
+          </figure>
+          <figure class="card spot quote reveal">
+            <blockquote>“I find his rapid progression from a developer to a Technical Architect truly commendable.”</blockquote>
+            <figcaption><span class="quote__avatar" aria-hidden="true">MV</span><span><strong>Mani Kandan Vasudevan</strong><span>Senior Technical Architect · Teammate</span></span></figcaption>
+          </figure>
+        </div>
+        <p class="quotes__more reveal"><a class="cred__verify" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce/details/recommendations/" target="_blank" rel="noopener">Read the full recommendations on LinkedIn <span aria-hidden="true">↗</span></a></p>
       </div>
     </section>
 
     <!-- ============ WRITING ============ -->
-    <section class="section section--ink" id="writing">
+    <section class="section" id="writing">
       <div class="wrap">
-        <p class="section__label"><span>§ 06</span> Notes from the field</p>
-        <div class="writing__head">
-          <h2 class="section__title">I write about what actually happens in&nbsp;delivery.</h2>
-          <p>Salesforce releases, Agentforce, integration architecture, and how AI is changing enterprise software work. Practical, specific, and earned from building the thing.</p>
+        <div class="sec-head sec-head--row reveal">
+          <div>
+            <span class="pill"><i></i>Writing</span>
+            <h2>Notes from <span class="grad">the field.</span></h2>
+          </div>
+          <p>Salesforce releases, Agentforce, integration architecture, and how AI is changing enterprise software work.</p>
         </div>
 
         <div class="posts">
-          <figure class="post reveal">
-            <p class="post__topic">#LightningWebComponents</p>
+          <a class="card spot post reveal" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce/recent-activity/all/" target="_blank" rel="noopener">
+            <span class="post__topic">#LightningWebComponents</span>
             <blockquote>“Every enterprise architect knows the pain of being asked to bring an external web portal into Salesforce.”</blockquote>
-            <figcaption>On microfrontends, embedding Angular and React apps without a rewrite.</figcaption>
-          </figure>
-          <figure class="post reveal">
-            <p class="post__topic">#DevOps</p>
+            <span class="post__more">On embedding Angular and React apps without a rewrite&nbsp;<span aria-hidden="true">↗</span></span>
+          </a>
+          <a class="card spot post reveal" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce/recent-activity/all/" target="_blank" rel="noopener">
+            <span class="post__topic">#DevOps</span>
             <blockquote>“I once delayed a critical production hotfix by forty minutes because my local VS Code token expired.”</blockquote>
-            <figcaption>On Code Builder, and why the environment is often the real bottleneck.</figcaption>
-          </figure>
-          <figure class="post reveal">
-            <p class="post__topic">#Agentforce</p>
+            <span class="post__more">On Code Builder and the real bottleneck&nbsp;<span aria-hidden="true">↗</span></span>
+          </a>
+          <a class="card spot post reveal" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce/recent-activity/all/" target="_blank" rel="noopener">
+            <span class="post__topic">#Agentforce</span>
             <blockquote>“Building an autonomous agent is easy; keeping it from hallucinating in production is where careers are made.”</blockquote>
-            <figcaption>On multi-agent orchestration and runtime observability.</figcaption>
-          </figure>
+            <span class="post__more">On multi-agent orchestration and observability&nbsp;<span aria-hidden="true">↗</span></span>
+          </a>
         </div>
-
-        <a class="btn btn--light" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce/recent-activity/all/" target="_blank" rel="noopener">Read &amp; follow on LinkedIn <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
     <!-- ============ CONTACT ============ -->
-    <section class="section contact" id="contact">
-      <div class="wrap contact__inner">
-        <p class="section__label"><span>§ 07</span> Contact</p>
-        <h2 class="contact__title">Let's talk architecture, adoption, or&nbsp;<em>agents.</em></h2>
-        <p class="contact__sub">Whether you're scaling a Salesforce org, trying to get real value out of AI on the platform, or growing as an architect, I'm always up for a good conversation.</p>
-        <div class="hero__ctas">
-          <a class="btn btn--primary btn--lg" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>
-            Connect on LinkedIn
-          </a>
-          <!-- Optional: add an email button once you decide which address to publish.
-          <a class="btn btn--ghost btn--lg" href="mailto:you@example.com">Email me</a> -->
+    <section class="section section--last" id="contact">
+      <div class="wrap">
+        <div class="cta reveal">
+          <div class="cta__glow" aria-hidden="true"></div>
+          <div class="cta__inner">
+            <div class="cta__main">
+              <span class="pill"><i></i>Contact</span>
+              <h2>Let's talk architecture, adoption, or <span class="grad">agents.</span></h2>
+              <p>Whether you're scaling a Salesforce org, trying to get real value out of AI on the platform, or growing as an architect, I'm always up for a good conversation.</p>
+              <div class="hero__ctas">
+                <a class="btn btn--light" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce" target="_blank" rel="noopener">
+                  <svg class="i-li" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>
+                  Connect on LinkedIn
+                </a>
+              </div>
+            </div>
+            <dl class="contact">
+              <div class="contact__row">
+                <dt>LinkedIn</dt>
+                <dd>
+                  <a class="contact__value" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce" target="_blank" rel="noopener">in/iftekhar-hussain</a>
+                  <a class="mini-btn" href="https://www.linkedin.com/in/iftekhar-hussain-customer-sucess-salesforce" target="_blank" rel="noopener">Connect ↗</a>
+                </dd>
+              </div>
+              <div class="contact__row"><dt>Based in</dt><dd><span class="contact__value">Bengaluru, India</span></dd></div>
+              <div class="contact__row"><dt>Time zone</dt><dd><span class="contact__value">IST (UTC+5:30)</span></dd></div>
+            </dl>
+          </div>
         </div>
-        <p class="contact__meta">Bengaluru, India · IST (UTC+5:30)</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="wrap footer__inner">
+      <span class="brand__mark brand__mark--sm" aria-hidden="true">IH</span>
       <p>© <span id="year">2026</span> Iftekhar Hussain</p>
       <p class="footer__note">Personal site. Views are my own and don't represent any employer.</p>
       <a href="#top" class="footer__top">Back to top ↑</a>

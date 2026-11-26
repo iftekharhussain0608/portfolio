@@ -4,44 +4,37 @@
 <meta charset="utf-8" />
 <title>LinkedIn banner source</title>
 <!-- Render with: tools/build-og.sh  (also produces assets/linkedin-banner.png at 1584x396).
-     LinkedIn's profile photo covers the lower-left of the banner, so all content sits right of ~430px. -->
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+     LinkedIn's profile photo covers the lower-left of the banner, so all content sits right of ~470px. -->
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..800&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet" />
 <style>
   html, body { margin: 0; width: 1584px; height: 396px; overflow: hidden; }
-  body {
-    background-color: #0C1B33;
-    background-image: linear-gradient(rgba(237,232,220,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(237,232,220,.06) 1px, transparent 1px);
-    background-size: 33px 33px; color: #EDE8DC; position: relative; font-family: Fraunces, Georgia, serif;
-  }
-  .copy { position: absolute; left: 470px; top: 70px; }
-  .eyebrow { font-family: "JetBrains Mono", monospace; font-size: 17px; letter-spacing: .1em; text-transform: uppercase; color: #A3ADBF; display: flex; gap: 12px; align-items: center; }
-  .eyebrow b { color: #FF7148; font-weight: 500; }
-  h1 { font-weight: 400; font-size: 64px; line-height: 1.05; letter-spacing: -.025em; margin: 22px 0 0; max-width: 16ch; font-variation-settings: "opsz" 144; }
-  h1 em { color: #FF7148; }
-  .tags { position: absolute; left: 470px; bottom: 54px; font-family: "JetBrains Mono", monospace; font-size: 16px; letter-spacing: .1em; text-transform: uppercase; color: #A3ADBF; }
-  svg { position: absolute; right: 90px; top: 38px; width: 320px; height: 320px; }
-  .l { fill: none; stroke: #EDE8DC; stroke-width: 1.4; opacity: .45; }
-  .d { stroke: #EDE8DC; stroke-width: 1.2; stroke-dasharray: 4 6; opacity: .4; }
-  rect { fill: #0C1B33; stroke: #EDE8DC; stroke-width: 2; }
-  .dim { stroke: #FF7148; stroke-width: 1.4; fill: none; }
+  body { background: #07080C; color: #F4F4F6; font-family: Geist, Inter, system-ui, sans-serif; position: relative; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(90px); }
+  .b1 { width: 520px; height: 520px; left: 300px; top: -320px; background: #3B5BDB; opacity: .55; }
+  .b2 { width: 560px; height: 560px; right: -100px; top: -260px; background: #7C3AED; opacity: .55; }
+  .b3 { width: 400px; height: 400px; left: 860px; bottom: -320px; background: #DB2777; opacity: .35; }
+  .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 44px 44px; -webkit-mask-image: radial-gradient(ellipse 60% 90% at 60% 30%, #000 20%, transparent 80%); }
+  .copy { position: absolute; left: 490px; top: 74px; }
+  .pill { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.05); font: 500 15px "Geist Mono", monospace; letter-spacing: .05em; text-transform: uppercase; color: #A1A1AA; }
+  .pill i { width: 7px; height: 7px; border-radius: 50%; background: linear-gradient(92deg, #6EA8FE, #A78BFA); box-shadow: 0 0 10px #A78BFA; }
+  h1 { margin: 24px 0 0; font-size: 58px; line-height: 1.05; font-weight: 650; letter-spacing: -0.045em; max-width: 17ch; }
+  .grad { background: linear-gradient(92deg, #6EA8FE, #A78BFA 50%, #F0ABFC); -webkit-background-clip: text; color: transparent; }
+  .chips { position: absolute; right: 80px; top: 50%; transform: translateY(-50%); display: grid; gap: 12px; justify-items: end; }
+  .chip { padding: 10px 18px; border-radius: 999px; font-size: 18px; font-weight: 500; background: rgba(16,18,28,.8); border: 1px solid rgba(255,255,255,.16); box-shadow: 0 12px 30px -12px rgba(0,0,0,.8); }
+  .chip:nth-child(2) { margin-right: 40px; } .chip:nth-child(3) { margin-right: 10px; }
+  .chip b { background: linear-gradient(92deg, #6EA8FE, #A78BFA 50%, #F0ABFC); -webkit-background-clip: text; color: transparent; font-weight: 650; }
 </style>
 </head>
 <body>
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><div class="grid"></div>
   <div class="copy">
-    <div class="eyebrow"><b>§</b> Salesforce Architect · Customer Success</div>
-    <h1>From blueprint to <em>business value.</em></h1>
+    <span class="pill"><i></i>Salesforce Architect · Customer Success</span>
+    <h1>Architecting platforms that deliver <span class="grad">real business value.</span></h1>
   </div>
-  <div class="tags">Architecture · Agentforce · Integration · Value realisation</div>
-  <svg viewBox="0 0 480 480" aria-hidden="true">
-    <circle class="l" cx="240" cy="240" r="200" opacity=".22"/>
-    <polygon class="l" points="240,80 378.6,160 378.6,320 240,400 101.4,320 101.4,160"/>
-    <line class="d" x1="240" y1="80" x2="240" y2="240"/><line class="d" x1="378.6" y1="160" x2="240" y2="240"/>
-    <line class="d" x1="378.6" y1="320" x2="240" y2="240"/><line class="d" x1="240" y1="400" x2="240" y2="240"/>
-    <line class="d" x1="101.4" y1="320" x2="240" y2="240"/><line class="d" x1="101.4" y1="160" x2="240" y2="240"/>
-    <rect x="228" y="68" width="24" height="24"/><rect x="366.6" y="148" width="24" height="24"/><rect x="366.6" y="308" width="24" height="24"/>
-    <rect x="228" y="388" width="24" height="24"/><rect x="89.4" y="308" width="24" height="24"/><rect x="89.4" y="148" width="24" height="24"/>
-    <circle cx="240" cy="240" r="40" fill="#FF7148"/>
-    <path class="dim" d="M101.4 462h277.2M101.4 454v16M378.6 454v16"/>
-  </svg>
+  <div class="chips">
+    <span class="chip"><b>8×</b> certified · Salesforce + Claude</span>
+    <span class="chip">✦ Agentforce Specialist</span>
+    <span class="chip"><b>1,300+</b> stores on one platform</span>
+  </div>
 </body>
 </html>

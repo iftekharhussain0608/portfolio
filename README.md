@@ -20,13 +20,21 @@ open index.html                    # or:
 python3 -m http.server 8080        # then visit http://localhost:8080
 ```
 
-## Before going live
+## Publishing changes
 
-- [ ] Replace `https://your-domain.com` in `index.html` (canonical, og:url, og:image) with the real URL. LinkedIn's link preview needs absolute URLs:
-      `sed -i '' 's#https://your-domain.com#https://YOUR-REAL-URL#g' index.html`
-- [ ] Add the two missing certifications (search `TODO` in `index.html`).
-- [ ] Optional: add a headshot, and an email button (commented out in the Contact section).
-- [ ] If you change your LinkedIn URL slug, update the 3 LinkedIn links plus `sameAs` in `index.html`.
+Placeholders show as amber boxes (`data-todo`) and unapproved copy is marked `data-draft`. A DRAFT badge
+appears in the corner while any remain. Never push until the check passes:
+
+```bash
+./tools/check-draft.sh && git add -A && git commit -m "Update site" && git push
+```
+
+## Keeping it current
+
+- Live at https://iftekharhussain0608.github.io/portfolio/ (GitHub Pages deploys on every push to `main`).
+- If you move to a custom domain, replace that URL in `index.html` (canonical, og:url, og:image, JSON-LD).
+- If you change your LinkedIn URL slug, update the LinkedIn links plus `sameAs` in `index.html`.
+- After changing `tools/og-image.html` or `tools/linkedin-banner.html`, re-render with `./tools/build-og.sh`.
 
 ## Deploy (pick one, all free)
 

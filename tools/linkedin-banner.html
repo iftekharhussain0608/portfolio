@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>LinkedIn banner source</title>
+<!-- Render with: tools/build-og.sh  (also produces assets/linkedin-banner.png at 1584x396).
+     LinkedIn's profile photo covers the lower-left of the banner, so all content sits right of ~430px. -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; width: 1584px; height: 396px; overflow: hidden; }
+  body {
+    background-color: #0C1B33;
+    background-image: linear-gradient(rgba(237,232,220,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(237,232,220,.06) 1px, transparent 1px);
+    background-size: 33px 33px; color: #EDE8DC; position: relative; font-family: Fraunces, Georgia, serif;
+  }
+  .copy { position: absolute; left: 470px; top: 70px; }
+  .eyebrow { font-family: "JetBrains Mono", monospace; font-size: 17px; letter-spacing: .1em; text-transform: uppercase; color: #A3ADBF; display: flex; gap: 12px; align-items: center; }
+  .eyebrow b { color: #FF7148; font-weight: 500; }
+  h1 { font-weight: 400; font-size: 64px; line-height: 1.05; letter-spacing: -.025em; margin: 22px 0 0; max-width: 16ch; font-variation-settings: "opsz" 144; }
+  h1 em { color: #FF7148; }
+  .tags { position: absolute; left: 470px; bottom: 54px; font-family: "JetBrains Mono", monospace; font-size: 16px; letter-spacing: .1em; text-transform: uppercase; color: #A3ADBF; }
+  svg { position: absolute; right: 90px; top: 38px; width: 320px; height: 320px; }
+  .l { fill: none; stroke: #EDE8DC; stroke-width: 1.4; opacity: .45; }
+  .d { stroke: #EDE8DC; stroke-width: 1.2; stroke-dasharray: 4 6; opacity: .4; }
+  rect { fill: #0C1B33; stroke: #EDE8DC; stroke-width: 2; }
+  .dim { stroke: #FF7148; stroke-width: 1.4; fill: none; }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <div class="eyebrow"><b>§</b> Salesforce Architect · Customer Success</div>
+    <h1>From blueprint to <em>business value.</em></h1>
+  </div>
+  <div class="tags">Architecture · Agentforce · Integration · Value realisation</div>
+  <svg viewBox="0 0 480 480" aria-hidden="true">
+    <circle class="l" cx="240" cy="240" r="200" opacity=".22"/>
+    <polygon class="l" points="240,80 378.6,160 378.6,320 240,400 101.4,320 101.4,160"/>
+    <line class="d" x1="240" y1="80" x2="240" y2="240"/><line class="d" x1="378.6" y1="160" x2="240" y2="240"/>
+    <line class="d" x1="378.6" y1="320" x2="240" y2="240"/><line class="d" x1="240" y1="400" x2="240" y2="240"/>
+    <line class="d" x1="101.4" y1="320" x2="240" y2="240"/><line class="d" x1="101.4" y1="160" x2="240" y2="240"/>
+    <rect x="228" y="68" width="24" height="24"/><rect x="366.6" y="148" width="24" height="24"/><rect x="366.6" y="308" width="24" height="24"/>
+    <rect x="228" y="388" width="24" height="24"/><rect x="89.4" y="308" width="24" height="24"/><rect x="89.4" y="148" width="24" height="24"/>
+    <circle cx="240" cy="240" r="40" fill="#FF7148"/>
+    <path class="dim" d="M101.4 462h277.2M101.4 454v16M378.6 454v16"/>
+  </svg>
+</body>
+</html>

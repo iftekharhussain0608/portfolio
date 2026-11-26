@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1200" />
+<title>OG image source</title>
+<!-- Render with: tools/build-og.sh  (produces assets/og-image.png at 1200x627) -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; width: 1200px; height: 627px; overflow: hidden; }
+  body {
+    background-color: #F5F2EA;
+    background-image: linear-gradient(rgba(12,27,51,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(12,27,51,.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: #0C1B33; font-family: Inter, system-ui, sans-serif; position: relative;
+  }
+  .frame { position: absolute; inset: 36px; border: 1.5px solid rgba(12,27,51,.25); }
+  .mark { position: absolute; width: 22px; height: 22px; border-color: #D8461F; border-style: solid; }
+  .tl { top: 26px; left: 26px; border-width: 2px 0 0 2px; } .tr { top: 26px; right: 26px; border-width: 2px 2px 0 0; }
+  .bl { bottom: 26px; left: 26px; border-width: 0 0 2px 2px; } .br { bottom: 26px; right: 26px; border-width: 0 2px 2px 0; }
+  .content { position: absolute; left: 92px; top: 84px; right: 92px; }
+  .eyebrow { font-family: "JetBrains Mono", monospace; font-size: 19px; letter-spacing: .08em; text-transform: uppercase; color: #6B7588; display: flex; align-items: center; gap: 14px; }
+  .dot { width: 11px; height: 11px; border-radius: 50%; background: #D8461F; box-shadow: 0 0 0 6px rgba(216,70,31,.14); }
+  h1 { font-family: Fraunces, Georgia, serif; font-weight: 400; font-size: 118px; line-height: .95; letter-spacing: -.035em; margin: 34px 0 30px; font-variation-settings: "opsz" 144; }
+  p { font-family: Fraunces, Georgia, serif; font-size: 40px; line-height: 1.22; margin: 0; max-width: 20ch; letter-spacing: -.01em; }
+  p em { color: #D8461F; }
+  .foot { position: absolute; left: 92px; right: 92px; bottom: 74px; display: flex; justify-content: space-between; font-family: "JetBrains Mono", monospace; font-size: 18px; letter-spacing: .08em; text-transform: uppercase; color: #3D4A5E; border-top: 1.5px solid rgba(12,27,51,.22); padding-top: 22px; }
+  .foot b { color: #D8461F; font-weight: 500; }
+  svg.bp { position: absolute; right: 70px; top: 70px; width: 330px; height: 330px; }
+  .bp .l { fill: none; stroke: #0C1B33; stroke-width: 1.4; opacity: .5; }
+  .bp .d { stroke: #0C1B33; stroke-width: 1.2; stroke-dasharray: 4 6; opacity: .5; }
+  .bp rect { fill: #FFFDF8; stroke: #0C1B33; stroke-width: 2; }
+</style>
+</head>
+<body>
+  <div class="frame"></div>
+  <span class="mark tl"></span><span class="mark tr"></span><span class="mark bl"></span><span class="mark br"></span>
+  <svg class="bp" viewBox="0 0 480 480" aria-hidden="true">
+    <circle class="l" cx="240" cy="240" r="200" opacity=".25"/>
+    <polygon class="l" points="240,80 378.6,160 378.6,320 240,400 101.4,320 101.4,160"/>
+    <line class="d" x1="240" y1="80" x2="240" y2="240"/><line class="d" x1="378.6" y1="160" x2="240" y2="240"/>
+    <line class="d" x1="378.6" y1="320" x2="240" y2="240"/><line class="d" x1="240" y1="400" x2="240" y2="240"/>
+    <line class="d" x1="101.4" y1="320" x2="240" y2="240"/><line class="d" x1="101.4" y1="160" x2="240" y2="240"/>
+    <rect x="228" y="68" width="24" height="24"/><rect x="366.6" y="148" width="24" height="24"/><rect x="366.6" y="308" width="24" height="24"/>
+    <rect x="228" y="388" width="24" height="24"/><rect x="89.4" y="308" width="24" height="24"/><rect x="89.4" y="148" width="24" height="24"/>
+    <circle cx="240" cy="240" r="40" fill="#D8461F"/>
+  </svg>
+  <div class="content">
+    <div class="eyebrow"><span class="dot"></span>Solutions Architect · Customer Success</div>
+    <h1>Iftekhar<br/>Hussain</h1>
+    <p>From blueprint to <em>business value.</em></p>
+  </div>
+  <div class="foot"><span>Salesforce · Agentforce · Integration</span><span><b>6×</b> Certified · Bengaluru</span></div>
+</body>
+</html>

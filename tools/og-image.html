@@ -13,21 +13,29 @@
   .b2 { width: 520px; height: 520px; right: -140px; top: -60px; background: #7C3AED; opacity: .55; }
   .b3 { width: 420px; height: 420px; left: 420px; bottom: -260px; background: #DB2777; opacity: .3; }
   .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 56px 56px; -webkit-mask-image: radial-gradient(ellipse 80% 80% at 40% 40%, #000 20%, transparent 75%); }
-  .content { position: absolute; left: 80px; top: 76px; right: 470px; }
+  .content { position: absolute; left: 80px; top: 76px; width: 560px; z-index: 2; }
   .badge { display: inline-flex; align-items: center; gap: 12px; padding: 6px 16px 6px 6px; border-radius: 999px; border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.05); font-size: 19px; color: #A1A1AA; }
   .badge b { padding: 4px 12px; border-radius: 999px; color: #fff; font-weight: 600; background: linear-gradient(92deg, rgba(110,168,254,.4), rgba(167,139,250,.5)); border: 1px solid rgba(167,139,250,.55); }
   h1 { margin: 34px 0 0; font-size: 96px; line-height: .98; font-weight: 650; letter-spacing: -0.05em; background: linear-gradient(180deg, #fff 35%, #9CA3AF 130%); -webkit-background-clip: text; color: transparent; }
-  p { margin: 26px 0 0; font-size: 34px; line-height: 1.22; font-weight: 500; letter-spacing: -0.025em; }
+  p { margin: 26px 0 0; font-size: 32px; line-height: 1.22; font-weight: 500; letter-spacing: -0.025em; }
   .grad { background: linear-gradient(92deg, #6EA8FE, #A78BFA 50%, #F0ABFC); -webkit-background-clip: text; color: transparent; }
-  .card { position: absolute; right: 70px; top: 120px; width: 360px; padding: 26px; border-radius: 26px;
-    background: linear-gradient(180deg, rgba(20,22,34,.9), rgba(11,13,20,.95)) padding-box, linear-gradient(160deg, rgba(255,255,255,.3), rgba(255,255,255,.04) 40%, rgba(167,139,250,.55)) border-box; border: 1.5px solid transparent; box-shadow: 0 30px 80px -20px rgba(0,0,0,.9); }
-  .glow { position: absolute; right: 90px; top: 150px; width: 330px; height: 330px; border-radius: 40px; filter: blur(50px); opacity: .55; background: conic-gradient(from 180deg, #6EA8FE, #A78BFA, #F0ABFC, #6EA8FE); }
-  .top { display: flex; align-items: center; gap: 16px; }
-  .av { width: 66px; height: 66px; border-radius: 50%; display: grid; place-items: center; font: 600 22px "Geist Mono", monospace; color: #fff; background: radial-gradient(120% 120% at 0% 0%, #6EA8FE, #8B5CF6 55%, #DB2777 120%); box-shadow: 0 0 0 3px #0B0D14, 0 0 0 5px rgba(167,139,250,.6); }
-  .nm { font-size: 22px; font-weight: 600; } .rl { font-size: 15px; color: #A1A1AA; margin-top: 2px; }
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 22px; }
-  .stats div { padding: 14px 12px; border-radius: 14px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); }
-  .stats b { display: block; font-size: 25px; letter-spacing: -0.03em; } .stats span { font-size: 13px; color: #71717A; }
+  /* Portrait: same cut-out and geometry as the site hero (assets/portrait.webp, 820x772). */
+  .portrait { position: absolute; left: 660px; bottom: 36px; width: 560px; height: 527px; }
+  .halo { position: absolute; left: 22px; top: -53px; width: 515px; height: 515px; border-radius: 50%;
+    background: radial-gradient(circle at 50% 45%, rgba(167,139,250,.55), rgba(110,168,254,.25) 40%, rgba(219,39,119,.12) 60%, transparent 72%); filter: blur(6px); }
+  .ring { position: absolute; left: 56px; top: -24px; width: 448px; height: 448px; border-radius: 50%;
+    background: conic-gradient(from 200deg, rgba(110,168,254,0), #6EA8FE 25%, #A78BFA 50%, #F0ABFC 70%, rgba(240,171,252,0) 90%);
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1.5px)); opacity: .9; }
+  .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+    -webkit-mask-image: linear-gradient(to bottom, #000 66%, transparent 98%), linear-gradient(to right, transparent 1%, #000 16%, #000 84%, transparent 99%);
+    -webkit-mask-composite: source-in; }
+  .card { position: absolute; left: 640px; bottom: 34px; width: 330px; padding: 18px; border-radius: 22px; z-index: 3;
+    background: linear-gradient(180deg, rgba(20,22,34,.88), rgba(11,13,20,.94)) padding-box, linear-gradient(160deg, rgba(255,255,255,.3), rgba(255,255,255,.04) 40%, rgba(167,139,250,.55)) border-box; border: 1.5px solid transparent; box-shadow: 0 30px 80px -20px rgba(0,0,0,.9); }
+  .status { display: inline-flex; align-items: center; gap: 8px; padding: 5px 12px; border-radius: 999px; font-size: 14px; color: #6EE7B7; background: rgba(16,185,129,.1); border: 1px solid rgba(16,185,129,.3); }
+  .status i { width: 7px; height: 7px; border-radius: 50%; background: #34D399; box-shadow: 0 0 10px #34D399; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 14px; }
+  .stats div { padding: 12px 11px; border-radius: 13px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); }
+  .stats b { display: block; font-size: 24px; letter-spacing: -0.03em; } .stats span { font-size: 12.5px; color: #71717A; }
   .foot { position: absolute; left: 80px; bottom: 54px; font: 500 18px "Geist Mono", monospace; letter-spacing: .04em; color: #71717A; display: flex; gap: 18px; }
   .foot i { width: 6px; height: 6px; border-radius: 50%; background: #A78BFA; align-self: center; }
 </style>
@@ -39,11 +47,14 @@
     <h1>Iftekhar<br/>Hussain</h1>
     <p>Architecting Salesforce platforms that deliver <span class="grad">real business value.</span></p>
   </div>
-  <div class="glow"></div>
+  <div class="portrait">
+    <span class="halo"></span><span class="ring"></span>
+    <img src="../assets/portrait.webp" alt="" />
+  </div>
   <div class="card">
-    <div class="top"><span class="av">IH</span><div><div class="nm">Iftekhar Hussain</div><div class="rl">Architect · Customer Success</div></div></div>
+    <span class="status"><i></i>Open to conversations</span>
     <div class="stats"><div><b>8×</b><span>Certified</span></div><div><b>3×</b><span>Architect</span></div><div><b>6–10</b><span>Devs / team</span></div></div>
   </div>
-  <div class="foot"><span>Agentforce</span><i></i><span>Integration</span><i></i><span>Data</span><i></i><span>Bengaluru</span></div>
+  <div class="foot"><span>Agentforce</span><i></i><span>Integration</span><i></i><span>Data</span><i></i><span>Claude</span></div>
 </body>
 </html>

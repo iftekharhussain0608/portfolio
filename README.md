@@ -35,6 +35,8 @@ appears in the corner while any remain. Never push until the check passes:
 - If you move to a custom domain, replace that URL in `index.html` (canonical, og:url, og:image, JSON-LD).
 - If you change your LinkedIn URL slug, update the LinkedIn links plus `sameAs` in `index.html`.
 - After changing `tools/og-image.html` or `tools/linkedin-banner.html`, re-render with `./tools/build-og.sh`.
+  When the preview image changes, bump the `?v=` number on `og:image` in `index.html`: LinkedIn caches images by URL,
+  so the same address keeps showing the old card even after Post Inspector re-reads the page.
 
 ## Deploy (pick one, all free)
 
